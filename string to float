@@ -1,0 +1,13 @@
+'''
+let s be a string that contains a sequence of decimal 
+numbers separated by commas, example 
+s ='1.23, 2.4, 3.123'. 
+write a program that prints the sum of the numbers in s.
+'''
+
+s='1.23,2.4,3.123'
+length=len(s)
+sum=0
+for i in range(length):
+    sum=sum+s[i]
+print('sum = ',sum)
