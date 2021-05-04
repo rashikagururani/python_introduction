@@ -6,8 +6,16 @@ write a program that prints the sum of the numbers in s.
 '''
 
 s='1.23,2.4,3.123'
-length=len(s)
+s_new = s.split(',')
+print('type of a :',type(s))
+new_list = []
+for item in s_new:
+    new_list.append(float(item))
+print('new_list type :',type(new_list))
+print('new_list =',new_list)
+print('new_list type:',type(new_list[0]))
+length=len(new_list)
 sum=0
 for i in range(length):
-    sum=sum+s[i]
+    sum=sum+new_list[i]
 print('sum = ',sum)
