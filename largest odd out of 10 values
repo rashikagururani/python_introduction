@@ -1,0 +1,56 @@
+maximum_Odd = None
+for _ in range(10):
+    value = int(input('Enter a value: '))
+    if (value % 2 !=0 and (maximum_Odd is None or value > maximum_Odd)):
+        maximum_Odd = value
+if maximum_Odd:
+    print('The largest odd value entered was', maximum_Odd)
+else:
+    print('No odd values were entered.')
+'''    
+print('Enter 10 nos.')
+a=int(input('Value of a :'))
+b=int(input('Value of b :'))
+c=int(input('Value of c :'))
+d=int(input('Value of d :'))
+e=int(input('Value of e :'))
+f=int(input('Value of f :'))
+g=int(input('Value of g :'))
+h=int(input('Value of h :'))
+i=int(input('Value of i :'))
+j=int(input('Value of j :'))
+
+if(a>b and a>c and a>d and a>e and a>f and a>g and a>h and a>i and a>j and a%2!=0):
+    print('largest odd is a:',a)
+
+elif(b>c and b>d and b>e and b>f and b>g and b>h and b>i and b>j and b%2!=0):
+    print('Largest odd is b:',b)
+    
+elif(c>d and c>e and c>f and c>g and c>h and c>i and c>j and c%2!=0):
+    print('Largest odd is c:',c)
+
+elif(d>e and d>f and d>g and d>h and d>i and d>j and d%2!=0):
+    print('Largest odd is d:',d)
+
+elif(e>f and e>g and e>h and e>i and e>j and e%2!=0):
+    print('Largest odd is e:',e)
+
+elif(f>g and f>h and f>i and f>j and f%2!=0):
+    print('Largest odd is f:',f)
+
+elif(g>h and g>i and g>j and g%2!=0):
+    print('Largest odd is g:',g)
+
+elif(h>i and h>j and h%2!=0):
+    print('Largest odd is h:',h)
+
+elif(i>j and i%2!=0):
+    print('Largest odd is i:',i)
+
+elif(j%2!=0):
+    print('Largest odd is j:',j)
+    
+else:
+    print('You haven\'t entered any odd values.')
+'''
+    
