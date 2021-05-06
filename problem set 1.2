@@ -1,0 +1,39 @@
+'''
+Problem set -2
+1.Have the user input a semi-annual salary raise semi_annual_raise (as a decimal percentage)
+
+2.After the 6 th month, increase your salary by that percentage. Do the same after the 12th th month, the 18 month, and so on.
+
+Write a program to calculate how many months it will take you save up enough money for a down payment. LIke before, assume that your investments earn a return of r = 0.04 (or 4%) and the required down payment percentage is 0.25 (or 25%). Have the user enter the following variables:
+
+1.The starting annual salary (annual_salary)
+
+2.The percentage of salary to be saved (portion_saved)
+
+3.The cost of your dream home (total_cost)
+
+4.The semiannual salary raise (semi_annual_raise)
+'''
+
+total_cost = float(input('Enter the total cost of your dream house (in $) :'))
+annual_salary = float(input('What is your annual salary :'))
+monthly_salary = annual_salary/12
+print('Your montly salary must be :',monthly_salary)
+portion_saved = float(input('What amount of your salary are you ready to save (in decimal):'))
+semi_annual_riase = float(input('What is your semi - annual salaray rise (as a decimal percentage:)'))
+
+portion_down_payment = 0.25*total_cost #25%
+print('Down payment will be of : $',portion_down_payment)
+
+time_down_payment = 0 #months
+portion_saved_down_payment=0
+annual_return=0.04
+
+while (portion_saved_down_payment <= portion_down_payment):
+    time_down_payment += 1    
+    portion_saved_down_payment += portion_saved * monthly_salary + portion_saved_down_payment * annual_return/12
+    
+    if(time_down_payment%6==0):
+        monthly_salary += semi_annual_riase*monthly_salary
+       
+print('time_down_payment : ',time_down_payment ,'months.')
